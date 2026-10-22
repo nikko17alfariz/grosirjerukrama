@@ -33,8 +33,8 @@
                 dark: "#050B08",
                 card: "#0A1811",
                 border: "#1E3A2B",
-                accent: "#FF5500",
-                accentHover: "#E04B00",
+                accent: "#F25C05" /* Lalamove / Rama Grosir Orange */,
+                accentHover: "#D95204",
                 green: "#10B981",
                 text: "#E2E8F0",
                 muted: "#94A3B8",
@@ -88,14 +88,14 @@
           rgba(5, 11, 8, 0.9)
         );
         backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 85, 0, 0.25);
-        box-shadow: 0 0 40px rgba(255, 85, 0, 0.1);
+        border: 1px solid rgba(242, 92, 5, 0.25);
+        box-shadow: 0 0 40px rgba(242, 92, 5, 0.1);
       }
       .glow-orange {
-        box-shadow: 0 0 25px rgba(255, 85, 0, 0.4);
+        box-shadow: 0 0 25px rgba(242, 92, 5, 0.4);
       }
       .glow-orange:hover {
-        box-shadow: 0 0 40px rgba(255, 85, 0, 0.6);
+        box-shadow: 0 0 40px rgba(242, 92, 5, 0.6);
       }
 
       /* Custom Scrollbar */
@@ -133,15 +133,7 @@
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between"
       >
-        <div class="flex items-center gap-2">
-          <span
-            class="inline-block w-2 h-2 rounded-full bg-brand-green animate-pulse"
-          ></span>
-          <span
-            >Update Stok <span id="currentDate"></span>:
-            <strong class="text-white">tanya admin</strong></span
-          >
-        </div>
+        <div class="flex items-center gap-2"></div>
         <div class="hidden md:flex items-center gap-6 text-brand-muted">
           <span class="flex items-center gap-1"
             >⚡ Garansi 100% Buah Segar</span
@@ -150,7 +142,7 @@
             >📦 Minimal Pesan Mulai 10 Kg</span
           >
           <span class="flex items-center gap-1"
-            >🚚 Pengiriman Sameday / Nextday</span
+            >🚚 Pengiriman Instan Lalamove</span
           >
         </div>
       </div>
@@ -192,7 +184,7 @@
 
         <!-- NAV LINKS -->
         <nav
-          class="hidden lg:flex items-center gap-8 font-medium text-sm text-brand-muted"
+          class="hidden lg:flex items-center gap-6 font-medium text-sm text-brand-muted"
         >
           <a
             href="#beranda"
@@ -206,20 +198,28 @@
             href="#kalkulator"
             class="hover:text-brand-accent transition-colors flex items-center gap-1.5 font-semibold text-emerald-400 group"
           >
-            <span class="group-hover:animate-bounce">🧮</span> Hitung Ongkir
+            <span class="group-hover:animate-bounce">🧮</span> Ongkir
           </a>
           <a
             href="#produk"
             class="hover:text-white transition-colors relative group"
-            >Katalog Produk
+            >Katalog
             <span
               class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"
             ></span>
           </a>
           <a
-            href="#tentang"
+            href="#galeri"
             class="hover:text-white transition-colors relative group"
-            >Tentang Kami
+            >Galeri
+            <span
+              class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#lokasi"
+            class="hover:text-white transition-colors relative group"
+            >Lokasi
             <span
               class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"
             ></span>
@@ -257,31 +257,16 @@
           <div class="grid lg:grid-cols-12 gap-12 items-center">
             <!-- LEFT HERO CONTENT -->
             <div class="lg:col-span-7 space-y-7">
-              <div
-                data-aos="fade-up"
-                data-aos-delay="100"
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs font-semibold text-brand-accent border-brand-accent/30 shadow-[0_0_15px_rgba(255,85,0,0.15)]"
-              >
-                <span class="relative flex h-2 w-2">
-                  <span
-                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"
-                  ></span>
-                  <span
-                    class="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"
-                  ></span>
-                </span>
-                <span>PASOKAN RUTIN & ECERAN GROSIR TERPERCAYA</span>
-              </div>
-
               <h1
                 data-aos="fade-up"
                 data-aos-delay="200"
                 class="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1]"
               >
-                Jeruk Peras Segar Tangan Pertama, <br />
+                Supplier Jeruk Peras Grosir dan Ecer, <br />
                 <span
                   class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-brand-accent to-amber-500 animate-gradient"
-                  >Kualitas Terjamin.</span
+                >
+                  Siap Melayani Kebutuhan Anda.</span
                 >
               </h1>
 
@@ -290,14 +275,11 @@
                 data-aos-delay="300"
                 class="text-base sm:text-lg text-brand-muted leading-relaxed max-w-2xl font-light"
               >
-                Pusat pasokan jeruk peras pilihan untuk kedai jus, usaha
-                minuman, reseller, pedagang pasar, hingga resto. Kirim fleksibel
-                mulai
-                <strong
-                  class="text-white font-bold bg-white/10 px-2 py-0.5 rounded"
-                  >10 Kg</strong
-                >
-                dengan perhitungan ongkir transparan.
+                Kami adalah supplier pemasok jeruk peras Anda, baik para
+                pengusaha Resto, Es Jeruk Peras, UMKM, Jus, dan lainnya. Kami
+                menyediakan kebutuhan jeruk peras berbagai macam jenis. Kami
+                supplier yang amanah dan transparan, jeruk yang kami panen
+                setiap hari menjadi nilai plus kami agar jeruk fresh setiap hari
               </p>
 
               <!-- ACTION BUTTONS -->
@@ -310,7 +292,7 @@
                   href="#kalkulator"
                   class="bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-4 rounded-2xl font-bold text-center glow-orange transition-all flex items-center justify-center gap-2 hover:scale-[1.02]"
                 >
-                  <span>Cek Ongkir Sekarang</span>
+                  <span>Cek Ongkir Lalamove</span>
                   <svg
                     class="w-5 h-5 animate-pulse"
                     fill="none"
@@ -355,19 +337,19 @@
                   <div
                     class="font-display font-bold text-3xl text-brand-green transition-colors group-hover:text-white"
                   >
-                    100%
+                    Ready
                   </div>
                   <div
                     class="text-xs text-brand-muted mt-1 uppercase tracking-wider"
                   >
-                    Garansi Retur
+                    Setiap Hari
                   </div>
                 </div>
                 <div class="group cursor-default">
                   <div
                     class="font-display font-bold text-3xl text-amber-400 transition-colors group-hover:text-brand-accent"
                   >
-                    10-200 Kg
+                    10-1000 Kg
                   </div>
                   <div
                     class="text-xs text-brand-muted mt-1 uppercase tracking-wider"
@@ -444,26 +426,21 @@
 
       <!-- CALCULATOR SECTION -->
       <section id="kalkulator" class="py-20 relative">
-        <!-- Decor lines -->
         <div
           class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-border to-transparent"
         ></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
-            <div
-              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs font-bold text-emerald-400 border-emerald-500/30 mb-4 shadow-[0_0_15px_rgba(16,185,129,0.1)]"
-            >
-              <span class="animate-pulse">🧮</span> TRANSPARANSI BIAYA LOGISTIK
-            </div>
             <h2
               class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight"
             >
-              Kalkulator Estimasi Ongkos Kirim
+              Kalkulator Cek Ongkir Lalamove
             </h2>
             <p class="text-brand-muted mt-4 text-sm sm:text-base">
-              Berapa pun jumlah pesanan Anda (10 Kg, 50 Kg, 100 Kg, atau lebih),
-              hitung perkiraan biaya kirim dan temukan pilihan armada termurah.
+              Kami bekerjasama eksklusif dengan <strong>Lalamove</strong> untuk
+              pengiriman instan. Hitung perkiraan biaya dan armada yang pas
+              untuk pesanan Anda.
             </p>
           </div>
 
@@ -473,11 +450,9 @@
               class="lg:col-span-7 glass-card p-6 sm:p-10 rounded-[2rem] space-y-8 shadow-2xl relative overflow-hidden"
               data-aos="fade-right"
             >
-              <!-- subtle bg pattern inside card -->
               <div
-                class="absolute top-0 right-0 w-64 h-64 bg-brand-green/5 rounded-full blur-[80px] -z-10"
+                class="absolute top-0 right-0 w-64 h-64 bg-brand-accent/5 rounded-full blur-[80px] -z-10"
               ></div>
-
               <!-- FLEXIBLE WEIGHT INPUT -->
               <div class="space-y-4">
                 <div class="flex items-center justify-between">
@@ -496,7 +471,6 @@
                     >50 Kg</span
                   >
                 </div>
-
                 <div class="flex items-center gap-4">
                   <div class="relative">
                     <input
@@ -504,7 +478,7 @@
                       id="weightInput"
                       value="50"
                       min="5"
-                      max="5000"
+                      max="1000"
                       step="1"
                       class="bg-brand-dark/80 border border-brand-border rounded-xl px-5 py-3.5 text-white font-extrabold text-xl w-36 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent focus:outline-none transition-all shadow-inner"
                     />
@@ -517,14 +491,12 @@
                     type="range"
                     id="weightSlider"
                     min="10"
-                    max="200"
+                    max="1000"
                     value="50"
                     step="5"
                     class="w-full accent-brand-accent bg-brand-dark h-2.5 rounded-full cursor-pointer appearance-none outline-none border border-white/5 shadow-inner"
                   />
                 </div>
-
-                <!-- QUICK PRESETS -->
                 <div class="flex flex-wrap items-center gap-2 pt-1">
                   <span class="text-xs text-brand-muted mr-1"
                     >Pilih Cepat:</span
@@ -539,17 +511,10 @@
                   <button
                     type="button"
                     onclick="setWeight(50)"
-                    class="px-3 py-1.5 text-xs font-semibold rounded-lg glass-card border-brand-accent text-brand-accent shadow-[0_0_10px_rgba(255,85,0,0.2)]"
+                    class="px-3 py-1.5 text-xs font-semibold rounded-lg glass-card border-brand-accent text-brand-accent shadow-[0_0_10px_rgba(242,92,5,0.2)]"
                     id="btn-50"
                   >
                     50 Kg
-                  </button>
-                  <button
-                    type="button"
-                    onclick="setWeight(75)"
-                    class="px-3 py-1.5 text-xs font-semibold rounded-lg glass-card hover:border-brand-accent hover:text-brand-accent transition-colors text-white"
-                  >
-                    75 Kg
                   </button>
                   <button
                     type="button"
@@ -560,26 +525,25 @@
                   </button>
                   <button
                     type="button"
-                    onclick="setWeight(150)"
+                    onclick="setWeight(500)"
                     class="px-3 py-1.5 text-xs font-semibold rounded-lg glass-card hover:border-brand-accent hover:text-brand-accent transition-colors text-white"
                   >
-                    150 Kg
+                    500 Kg
                   </button>
                 </div>
-
                 <!-- JUICE ESTIMATOR HELPER -->
                 <div
-                  class="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-900/50 flex items-center justify-between transition-all hover:bg-emerald-950/50"
+                  class="p-4 rounded-2xl bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-between transition-all hover:bg-brand-accent/20"
                 >
                   <div class="flex items-center gap-3">
                     <span class="text-xl">🍹</span>
-                    <span class="text-xs font-medium text-emerald-300"
+                    <span class="text-xs font-medium text-brand-accent"
                       >Estimasi Hasil Perasan Jus:</span
                     >
                   </div>
                   <strong
                     id="juiceYieldEstimate"
-                    class="text-white text-sm font-bold bg-emerald-500/20 px-3 py-1 rounded-lg border border-emerald-500/30"
+                    class="text-white text-sm font-bold bg-brand-accent/20 px-3 py-1 rounded-lg border border-brand-accent/30"
                     >~350 Porsi (250ml)</strong
                   >
                 </div>
@@ -602,21 +566,17 @@
                     class="w-full bg-brand-dark/80 border border-brand-border rounded-xl px-5 py-4 text-white font-medium text-sm focus:border-brand-accent focus:ring-1 focus:ring-brand-accent focus:outline-none appearance-none transition-all shadow-inner"
                   >
                     <option value="jabodetabek" selected>
-                      Jabodetabek (Sameday / Instant Courier)
+                      Jabodetabek (Instant / Sameday Lalamove)
                     </option>
                     <option value="jabar">
-                      Bandung & Jawa Barat (H+1 Express)
+                      Jawa Barat (Rute Lalamove Antarkota)
                     </option>
                     <option value="jateng">
-                      Semarang & Jawa Tengah (1-2 Hari)
+                      Jawa Tengah (Rute Lalamove Antarkota)
                     </option>
                     <option value="jatim">
-                      Surabaya & Jawa Timur (1-2 Hari)
+                      Jawa Timur (Rute Lalamove Antarkota)
                     </option>
-                    <option value="sumatra">
-                      Lampung & Sumatera (2-3 Hari)
-                    </option>
-                    <option value="bali">Bali & Wilayah Lainnya</option>
                   </select>
                   <div
                     class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-brand-muted"
@@ -638,23 +598,27 @@
                 </div>
               </div>
 
-              <!-- ARMADA SELECTION -->
+              <!-- ARMADA SELECTION LALAMOVE -->
               <div class="space-y-3">
-                <label
-                  class="font-bold text-sm text-white flex items-center gap-2"
-                >
-                  <span
-                    class="flex items-center justify-center w-6 h-6 rounded-full bg-brand-accent/20 text-brand-accent text-xs"
-                    >3</span
+                <div class="flex items-center justify-between">
+                  <label
+                    class="font-bold text-sm text-white flex items-center gap-2"
                   >
-                  Opsi Armada Logistik
-                </label>
+                    <span
+                      class="flex items-center justify-center w-6 h-6 rounded-full bg-brand-accent/20 text-brand-accent text-xs"
+                      >3</span
+                    >
+                    Pilih Armada Lalamove
+                  </label>
+                  <span
+                    class="text-[10px] bg-brand-accent text-white px-2 py-0.5 rounded uppercase font-bold tracking-widest shadow-md"
+                    >Powered By Lalamove</span
+                  >
+                </div>
                 <div
                   class="grid grid-cols-1 sm:grid-cols-2 gap-3"
                   id="armadaContainer"
-                >
-                  <!-- Dynamic Armada Cards -->
-                </div>
+                ></div>
               </div>
 
               <!-- ADDONS -->
@@ -767,12 +731,12 @@
                     ><span
                       class="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-brand-accent transition-colors"
                     ></span
-                    >Armada Terpilih:</span
+                    >Tipe Lalamove:</span
                   >
                   <strong
-                    class="text-emerald-400 font-bold bg-emerald-400/10 px-2 py-0.5 rounded"
+                    class="text-brand-accent font-bold bg-brand-accent/10 border border-brand-accent/20 px-2 py-0.5 rounded"
                     id="resArmada"
-                    >Blind Van Cargo</strong
+                    >Lalamove Mobil</strong
                   >
                 </div>
                 <div class="flex justify-between items-center group">
@@ -794,7 +758,6 @@
                 >
                   TOTAL ONGKIR
                 </div>
-
                 <div class="text-center mt-4">
                   <div
                     class="font-display font-black text-4xl sm:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-brand-accent drop-shadow-[0_0_15px_rgba(255,85,0,0.3)] transition-all duration-300"
@@ -803,12 +766,11 @@
                     Rp 90.000
                   </div>
                 </div>
-
                 <p
                   class="text-[11px] text-brand-muted/70 text-center mt-4 leading-relaxed font-light"
                 >
-                  *Ongkir ditanggung penuh oleh pembeli. Tim kami siap carikan
-                  Lalamove/Deliveree/Kargo termurah untuk Anda.
+                  *Ongkir ditanggung penuh oleh pembeli. Link Live Tracking
+                  Lalamove akan diberikan setelah order diproses.
                 </p>
               </div>
 
@@ -833,230 +795,395 @@
       </section>
 
       <!-- PRODUCT CATALOG -->
+      <section id="produk" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+            <h2
+              class="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight"
+            >
+              Katalog Produk
+            </h2>
+            <p class="text-brand-muted mt-4 text-sm font-light">
+              Dipilih secara ketat langsung dari kebun mitra untuk memastikan
+              rasa, kadar air perasan, dan daya simpan terbaik untuk usaha Anda.
+            </p>
+          </div>
+
+          <!-- GRID 2 KOLOM RAPI DITENGAH -->
+          <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- CARD 1: Jeruk Peras BL -->
+            <div
+              class="glass-card rounded-[2rem] overflow-hidden hover:border-brand-accent/50 transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,92,5,0.2)]"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1579553304207-2b7f5ace4be7?w=600&auto=format&fit=crop&q=80"
+                  alt="Jeruk Peras BL"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-80"
+                ></div>
+                <span
+                  class="absolute top-4 left-4 bg-brand-accent text-white text-[10px] font-black px-3 py-1.5 rounded-full shadow-lg tracking-widest uppercase"
+                  >BEST SELLER</span
+                >
+              </div>
+              <div class="p-8 space-y-5">
+                <h3
+                  class="font-display font-bold text-2xl text-white group-hover:text-brand-accent transition-colors"
+                >
+                  Jeruk Peras BL
+                </h3>
+                <p class="text-xs text-brand-muted leading-relaxed font-light">
+                  Kualitas unggulan dengan
+                  <strong>ukuran campur (Sedang - Besar)</strong>. Air perasan
+                  sangat melimpah, pilihan ideal untuk kedai jus & resto yang
+                  butuh hasil maksimal.
+                </p>
+                <div
+                  class="grid grid-cols-2 gap-3 text-xs pt-4 border-t border-white/5"
+                >
+                  <div class="bg-black/30 p-2.5 rounded-xl">
+                    <span
+                      class="text-brand-muted/70 block text-[10px] uppercase mb-1"
+                      >Ukuran</span
+                    ><strong class="text-amber-400">Sedang - Besar</strong>
+                  </div>
+                  <div class="bg-black/30 p-2.5 rounded-xl">
+                    <span
+                      class="text-brand-muted/70 block text-[10px] uppercase mb-1"
+                      >Air Perasan</span
+                    ><strong class="text-emerald-400">Sangat Tinggi</strong>
+                  </div>
+                  <div class="bg-black/30 p-2.5 rounded-xl">
+                    <span
+                      class="text-brand-muted/70 block text-[10px] uppercase mb-1"
+                      >Min. Order</span
+                    ><strong class="text-white">10 Kg</strong>
+                  </div>
+                  <div class="bg-black/30 p-2.5 rounded-xl">
+                    <span
+                      class="text-brand-muted/70 block text-[10px] uppercase mb-1"
+                      >Kemasan</span
+                    ><strong class="text-white">Peti/Karung</strong>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/6285893107096?text=Halo%20Rama%20Grosir,%20saya%20ingin%20tanya%20harga%20Jeruk%20Peras%20BL."
+                  target="_blank"
+                  class="block text-center w-full py-3.5 bg-white/5 hover:bg-brand-accent border border-white/10 hover:border-brand-accent text-white text-xs font-bold rounded-xl transition-all duration-300"
+                >
+                  Tanya Harga Jeruk BL
+                </a>
+              </div>
+            </div>
+
+            <!-- CARD 2: Jeruk Peras MT -->
+            <div
+              class="glass-card rounded-[2rem] overflow-hidden hover:border-emerald-500/50 transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)]"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1729499992248-8ec8dd40cf5b?w=600&auto=format&fit=crop&q=80"
+                  alt="Jeruk Peras MT"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-80"
+                ></div>
+                <span
+                  class="absolute top-4 left-4 bg-emerald-600 text-white text-[10px] font-black px-3 py-1.5 rounded-full shadow-lg tracking-widest uppercase"
+                  >PILIHAN HEMAT</span
+                >
+              </div>
+              <div class="p-8 space-y-5">
+                <h3
+                  class="font-display font-bold text-2xl text-white group-hover:text-emerald-400 transition-colors"
+                >
+                  Jeruk Peras MT
+                </h3>
+                <p class="text-xs text-brand-muted leading-relaxed font-light">
+                  Pilihan cerdas dengan <strong>ukuran Sedang</strong> yang
+                  seragam. Memiliki rasa manis yang segar, sangat pas untuk
+                  penjual es jeruk peras harian.
+                </p>
+                <div
+                  class="grid grid-cols-2 gap-3 text-xs pt-4 border-t border-white/5"
+                >
+                  <div class="bg-black/30 p-2.5 rounded-xl">
+                    <span
+                      class="text-brand-muted/70 block text-[10px] uppercase mb-1"
+                      >Ukuran</span
+                    ><strong class="text-amber-400">Sedang Seragam</strong>
+                  </div>
+                  <div class="bg-black/30 p-2.5 rounded-xl">
+                    <span
+                      class="text-brand-muted/70 block text-[10px] uppercase mb-1"
+                      >Karakter Rasa</span
+                    ><strong class="text-emerald-400">Manis Segar</strong>
+                  </div>
+                  <div class="bg-black/30 p-2.5 rounded-xl">
+                    <span
+                      class="text-brand-muted/70 block text-[10px] uppercase mb-1"
+                      >Min. Order</span
+                    ><strong class="text-white">10 Kg</strong>
+                  </div>
+                  <div class="bg-black/30 p-2.5 rounded-xl">
+                    <span
+                      class="text-brand-muted/70 block text-[10px] uppercase mb-1"
+                      >Kemasan</span
+                    ><strong class="text-white">Karung/Dus</strong>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/6285893107096?text=Halo%20Rama%20Grosir,%20saya%20ingin%20tanya%20harga%20Jeruk%20Peras%20MT."
+                  target="_blank"
+                  class="block text-center w-full py-3.5 bg-white/5 hover:bg-emerald-600 border border-white/10 hover:border-emerald-600 text-white text-xs font-bold rounded-xl transition-all duration-300"
+                >
+                  Tanya Harga Jeruk MT
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERI VISUAL -->
       <section
-        id="produk"
+        id="galeri"
         class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative"
       >
         <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card text-xs font-bold text-brand-accent border-brand-accent/30 mb-4 shadow-[0_0_10px_rgba(255,85,0,0.1)]"
-          >
-            <span class="w-2 h-2 rounded-full bg-brand-accent"></span> PILIHAN
-            KUALITAS
-          </div>
           <h2
             class="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight"
           >
-            Katalog Produk
+            Galeri Kami
           </h2>
           <p class="text-brand-muted mt-4 text-sm font-light">
-            Dipilih secara ketat langsung dari kebun mitra untuk memastikan
-            rasa, kadar air perasan, dan daya simpan terbaik usaha Anda.
+            Intip sedikit proses penyortiran hingga penyiapan pasokan segar dari
+            kebun untuk bisnis Anda.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- CARD 1 -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           <div
-            class="glass-card rounded-[2rem] overflow-hidden hover:border-brand-accent/50 transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(255,85,0,0.2)]"
-            data-aos="fade-up"
+            class="col-span-2 md:col-span-2 row-span-2 glass-card rounded-[2rem] overflow-hidden group"
+            data-aos="zoom-in"
             data-aos-delay="100"
           >
-            <div class="h-56 overflow-hidden relative">
-              <img
-                src="https://images.unsplash.com/photo-1579553304207-2b7f5ace4be7?w=600&auto=format&fit=crop&q=80"
-                alt="Jeruk Peras Grade A"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-80"
-              ></div>
-              <span
-                class="absolute top-4 left-4 bg-brand-accent text-white text-[10px] font-black px-3 py-1.5 rounded-full shadow-lg tracking-widest uppercase"
-                >BEST SELLER</span
-              >
-            </div>
-            <div class="p-8 space-y-5">
-              <h3
-                class="font-display font-bold text-2xl text-white group-hover:text-brand-accent transition-colors"
-              >
-                Grade A Super
-              </h3>
-              <p class="text-xs text-brand-muted leading-relaxed font-light">
-                Buah mulus, kulit tipis, kandungan air melimpah. Cocok untuk
-                kedai jus premium & cafe.
-              </p>
-              <div
-                class="grid grid-cols-2 gap-3 text-xs pt-4 border-t border-white/5"
-              >
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Manis</span
-                  ><strong class="text-amber-400">10-12° Brix</strong>
-                </div>
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Air</span
-                  ><strong class="text-emerald-400">High Yield</strong>
-                </div>
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Min. Order</span
-                  ><strong class="text-white">10 Kg</strong>
-                </div>
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Kemasan</span
-                  ><strong class="text-white">Peti/Karung</strong>
-                </div>
+            <img
+              src="https://images.unsplash.com/photo-1611080626919-7cf5a9db465f?auto=format&fit=crop&w=800&q=80"
+              alt="Penyortiran Jeruk di Gudang"
+              class="w-full h-full min-h-[300px] object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+            >
+              <div>
+                <h4 class="font-bold text-white text-lg">Penyortiran Ketat</h4>
+                <p class="text-xs text-brand-muted mt-1">
+                  Kami pastikan tidak ada buah busuk sebelum dikirim.
+                </p>
               </div>
-              <a
-                href="https://wa.me/6285893107096?text=Halo%20Rama%20Grosir,%20saya%20ingin%20tanya%20harga%20Grade%20A%20Super."
-                target="_blank"
-                class="block text-center w-full py-3.5 bg-white/5 hover:bg-brand-accent border border-white/10 hover:border-brand-accent text-white text-xs font-bold rounded-xl transition-all duration-300"
-              >
-                Tanya Harga Grade A
-              </a>
             </div>
           </div>
 
-          <!-- CARD 2 -->
           <div
-            class="glass-card rounded-[2rem] overflow-hidden hover:border-emerald-500/50 transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)]"
-            data-aos="fade-up"
+            class="glass-card rounded-3xl overflow-hidden group"
+            data-aos="zoom-in"
             data-aos-delay="200"
           >
-            <div class="h-56 overflow-hidden relative">
-              <img
-                src="https://images.unsplash.com/photo-1729499992248-8ec8dd40cf5b?w=600&auto=format&fit=crop&q=80"
-                alt="Jeruk Pontianak Premier"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-80"
-              ></div>
-              <span
-                class="absolute top-4 left-4 bg-emerald-600 text-white text-[10px] font-black px-3 py-1.5 rounded-full shadow-lg tracking-widest uppercase"
-                >SUPER SWEET</span
-              >
-            </div>
-            <div class="p-8 space-y-5">
-              <h3
-                class="font-display font-bold text-2xl text-white group-hover:text-emerald-400 transition-colors"
-              >
-                Pontianak Premier
-              </h3>
-              <p class="text-xs text-brand-muted leading-relaxed font-light">
-                Aroma citrus harum dengan rasa manis alami. Pilihan utama jus
-                murni tanpa gula.
-              </p>
-              <div
-                class="grid grid-cols-2 gap-3 text-xs pt-4 border-t border-white/5"
-              >
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Manis</span
-                  ><strong class="text-amber-400">12-14° Brix</strong>
-                </div>
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Air</span
-                  ><strong class="text-emerald-400">Sangat Tinggi</strong>
-                </div>
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Min. Order</span
-                  ><strong class="text-white">20 Kg</strong>
-                </div>
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Kemasan</span
-                  ><strong class="text-white">Karung/Dus</strong>
-                </div>
-              </div>
-              <a
-                href="https://wa.me/6285893107096?text=Halo%20Rama%20Grosir,%20saya%20ingin%20tanya%20harga%20Pontianak%20Premier."
-                target="_blank"
-                class="block text-center w-full py-3.5 bg-white/5 hover:bg-emerald-600 border border-white/10 hover:border-emerald-600 text-white text-xs font-bold rounded-xl transition-all duration-300"
-              >
-                Tanya Harga Pontianak
-              </a>
-            </div>
+            <img
+              src="https://images.unsplash.com/photo-1582293041079-7814c2f12063?auto=format&fit=crop&w=500&q=80"
+              alt="Hasil Perasan Jus Segar"
+              class="w-full h-48 sm:h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+            />
           </div>
 
-          <!-- CARD 3 -->
           <div
-            class="glass-card rounded-[2rem] overflow-hidden hover:border-amber-500/50 transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(245,158,11,0.2)]"
-            data-aos="fade-up"
+            class="glass-card rounded-3xl overflow-hidden group"
+            data-aos="zoom-in"
             data-aos-delay="300"
           >
-            <div class="h-56 overflow-hidden relative">
-              <img
-                src="https://images.unsplash.com/photo-1675492108711-f8789d9113be?w=600&auto=format&fit=crop&q=80"
-                alt="Jeruk Baby Pacitan Squeeze"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-80"
-              ></div>
-              <span
-                class="absolute top-4 left-4 bg-amber-500 text-black text-[10px] font-black px-3 py-1.5 rounded-full shadow-lg tracking-widest uppercase"
-                >KIDS FAVORITE</span
-              >
+            <img
+              src="https://images.unsplash.com/photo-1557844352-761f2565b576?auto=format&fit=crop&w=500&q=80"
+              alt="Panen Langsung Petani"
+              class="w-full h-48 sm:h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          </div>
+
+          <div
+            class="col-span-2 glass-card rounded-3xl overflow-hidden group"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80"
+              alt="Tumpukan Jeruk Segar Kualitas Premium"
+              class="w-full h-48 sm:h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+            >
+              <h4 class="font-bold text-white text-lg">
+                Stok Harian Selalu Segar
+              </h4>
             </div>
-            <div class="p-8 space-y-5">
-              <h3
-                class="font-display font-bold text-2xl text-white group-hover:text-amber-400 transition-colors"
-              >
-                Baby Pacitan Squeeze
-              </h3>
-              <p class="text-xs text-brand-muted leading-relaxed font-light">
-                Sangat manis alami, tidak pahit saat diperas. Favorit pedagang
-                jus sehat & resto.
-              </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOKASI CABANG & GUDANG -->
+      <section id="lokasi" class="py-24 relative overflow-hidden">
+        <div
+          class="absolute inset-0 bg-black/40 border-y border-brand-border/50 -z-10"
+        ></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+            <h2
+              class="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight"
+            >
+              Kunjungi Kami
+            </h2>
+            <p class="text-brand-muted mt-4 text-sm font-light">
+              Pengambilan langsung *(pick-up)* di gudang bisa dilakukan. Hubungi
+              tim kami untuk membuat janji pengambilan barang grosir Anda.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8">
+            <!-- LOKASI 1: GUDANG Reni -->
+            <div
+              class="glass-card rounded-[2rem] p-4 sm:p-6 hover:border-brand-accent/50 transition-colors"
+              data-aos="fade-right"
+            >
               <div
-                class="grid grid-cols-2 gap-3 text-xs pt-4 border-t border-white/5"
+                class="w-full h-64 rounded-2xl overflow-hidden mb-6 border border-white/10 relative group"
               >
-                <div class="bg-black/30 p-2.5 rounded-xl">
+                <div
+                  class="absolute inset-0 bg-brand-accent/20 flex items-center justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                >
                   <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Manis</span
-                  ><strong class="text-amber-400">11-13° Brix</strong>
+                    class="bg-black/80 text-white px-4 py-2 rounded-lg text-sm font-bold backdrop-blur-md"
+                    >Peta Interaktif</span
+                  >
                 </div>
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Air</span
-                  ><strong class="text-emerald-400">Melimpah</strong>
-                </div>
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Min. Order</span
-                  ><strong class="text-white">10 Kg</strong>
-                </div>
-                <div class="bg-black/30 p-2.5 rounded-xl">
-                  <span
-                    class="text-brand-muted/70 block text-[10px] uppercase mb-1"
-                    >Kemasan</span
-                  ><strong class="text-white">Peti/Karung</strong>
-                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.233563516542!2d106.72581749999999!3d-6.363811199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef004ae70589%3A0x6e92856791a052aa!2sRama%20Grosir%202%20Reni%20Jaya!5e0!3m2!1sid!2sid!4v1792644570008!5m2!1sid!2sid"
+                  class="w-full h-full border-0 invert-[10%] hue-rotate-[160deg]"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
               </div>
-              <a
-                href="https://wa.me/6285893107096?text=Halo%20Rama%20Grosir,%20saya%20ingin%20tanya%20harga%20Baby%20Pacitan."
-                target="_blank"
-                class="block text-center w-full py-3.5 bg-white/5 hover:bg-amber-500 hover:text-black border border-white/10 hover:border-amber-500 text-white text-xs font-bold rounded-xl transition-all duration-300"
+
+              <div class="px-2">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <span
+                      class="text-[10px] bg-brand-accent/20 text-brand-accent font-bold px-2.5 py-1 rounded uppercase tracking-wider mb-2 inline-block"
+                      >Cabang 1</span
+                    >
+                    <h3 class="font-display font-bold text-2xl text-white">
+                      Cabang Reni
+                    </h3>
+                  </div>
+                  <div class="p-3 bg-white/5 rounded-xl text-xl">📍</div>
+                </div>
+
+                <div class="space-y-3 text-sm text-brand-muted font-light mb-6">
+                  <p class="flex items-start gap-3">
+                    <span class="mt-0.5">🏢</span>
+                    <span
+                      >Perum Reni Jaya Lama No.3A Blok G5, Pd. Petir, Kec.
+                      Bojongsari, Kota Depok, Jawa Barat 16517</span
+                    >
+                  </p>
+                  <p class="flex items-center gap-3">
+                    <span>🕒</span>
+                    <span>Buka Setiap Hari: 08:00 - 20:00 WIB</span>
+                  </p>
+                </div>
+
+                <a
+                  href="https://maps.app.goo.gl/HWSGsjvPvFFegXwH6"
+                  target="_blank"
+                  class="w-full block text-center py-3 bg-white/5 hover:bg-brand-accent border border-white/10 hover:border-brand-accent text-white text-xs font-bold rounded-xl transition-all duration-300"
+                >
+                  Buka di Google Maps ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- LOKASI 2: CABANG Cinangka -->
+            <div
+              class="glass-card rounded-[2rem] p-4 sm:p-6 hover:border-emerald-500/50 transition-colors"
+              data-aos="fade-left"
+            >
+              <div
+                class="w-full h-64 rounded-2xl overflow-hidden mb-6 border border-white/10 relative group"
               >
-                Tanya Harga Pacitan
-              </a>
+                <div
+                  class="absolute inset-0 bg-emerald-500/20 flex items-center justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                >
+                  <span
+                    class="bg-black/80 text-white px-4 py-2 rounded-lg text-sm font-bold backdrop-blur-md"
+                    >Peta Interaktif</span
+                  >
+                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.168797728122!2d106.75788759999999!3d-6.3721967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef0002661eef%3A0x6359f027aa9b8b6f!2sToko%20Rama%20Grosir!5e0!3m2!1sid!2sid!4v1792644846711!5m2!1sid!2sid"
+                  class="w-full h-full border-0 invert-[10%] hue-rotate-[160deg]"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+
+              <div class="px-2">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <span
+                      class="text-[10px] bg-emerald-500/20 text-emerald-400 font-bold px-2.5 py-1 rounded uppercase tracking-wider mb-2 inline-block"
+                      >Cabang 2</span
+                    >
+                    <h3 class="font-display font-bold text-2xl text-white">
+                      Cabang Cinangka
+                    </h3>
+                  </div>
+                  <div class="p-3 bg-white/5 rounded-xl text-xl">📍</div>
+                </div>
+
+                <div class="space-y-3 text-sm text-brand-muted font-light mb-6">
+                  <p class="flex items-start gap-3">
+                    <span class="mt-0.5">🏢</span>
+                    <span
+                      >Jl. Pendidikan No.15, kp.bulak, Cinangka, Kec. Sawangan,
+                      Kota Depok, Jawa Barat 16516</span
+                    >
+                  </p>
+                  <p class="flex items-center gap-3">
+                    <span>🕒</span>
+                    <span>Buka Senin - Sabtu: 08:00 - 21:00 WIB</span>
+                  </p>
+                </div>
+
+                <a
+                  href="https://maps.app.goo.gl/Q1sJrXeqeiyVrjEH8"
+                  target="_blank"
+                  class="w-full block text-center py-3 bg-white/5 hover:bg-emerald-600 border border-white/10 hover:border-emerald-600 text-white text-xs font-bold rounded-xl transition-all duration-300"
+                >
+                  Buka di Google Maps ↗
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1064,7 +1191,6 @@
 
       <!-- TENTANG KAMI -->
       <section id="tentang" class="py-24 relative overflow-hidden">
-        <!-- Background divider -->
         <div
           class="absolute inset-0 bg-black/40 border-y border-brand-border/50 -z-10 transform skew-y-1 origin-top-left"
         ></div>
@@ -1082,13 +1208,11 @@
                 />
                 <span>MITRA PASOKAN TERPERCAYA</span>
               </div>
-
               <h2
                 class="font-display font-extrabold text-4xl sm:text-5xl text-white leading-tight"
               >
                 Kenapa Memilih RAMA GROSIR?
               </h2>
-
               <p class="text-brand-muted text-base leading-relaxed font-light">
                 Kami berpengalaman melayani kebutuhan pasokan buah jeruk peras
                 untuk berbagai skala bisnis. Kami mengedepankan keterbukaan
@@ -1102,15 +1226,16 @@
                   <div
                     class="text-3xl filter drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] group-hover:scale-110 transition-transform"
                   >
-                    🛡️
+                    📦
                   </div>
                   <div>
                     <h4 class="font-bold text-white text-sm">
-                      Garansi 100% Retur Busuk
+                      Selalu Ready Setiap Hari
                     </h4>
                     <p class="text-xs text-brand-muted mt-1.5 font-light">
-                      Jika ada buah busuk berlebih saat tiba, lampirkan video
-                      unboxing, kami ganti atau beri potongan harga langsung!
+                      Pasokan jeruk peras di gudang kami selalu tersedia dan
+                      datang baru setiap hari untuk menjaga kelancaran pasokan
+                      bisnis Anda.
                     </p>
                   </div>
                 </div>
@@ -1144,11 +1269,11 @@
                   </div>
                   <div>
                     <h4 class="font-bold text-white text-sm">
-                      Bebas Pilih Logistik
+                      Partner Resmi Lalamove
                     </h4>
                     <p class="text-xs text-brand-muted mt-1.5 font-light">
-                      Gunakan kurir instan langgananmu (Lalamove/Deliveree) atau
-                      biarkan tim kami carikan kargo termurah.
+                      Kirim berapapun aman! Dari 10 Kg pakai motor sampai 1 Ton
+                      pakai Box, bisa di tracking live.
                     </p>
                   </div>
                 </div>
@@ -1156,7 +1281,6 @@
             </div>
 
             <div class="relative" data-aos="fade-left" data-aos-delay="200">
-              <!-- decorative elements -->
               <div
                 class="absolute -top-6 -right-6 w-32 h-32 bg-brand-accent/20 rounded-full blur-2xl"
               ></div>
@@ -1258,9 +1382,9 @@
             >
               Ongkos kirim ditanggung penuh oleh pembeli. Kamu bisa langsung
               menggunakan fasilitas
-              <strong class="text-white">Kalkulator Ongkir</strong> di atas
-              untuk melihat perkiraan biaya kirim berdasarkan berat (Kg) dan
-              wilayah tujuan.
+              <strong class="text-white">Kalkulator Ongkir Lalamove</strong> di
+              atas untuk melihat perkiraan biaya kirim berdasarkan berat (Kg)
+              dan wilayah tujuan.
             </div>
           </details>
 
@@ -1295,7 +1419,7 @@
       class="bg-black/80 border-t border-brand-border/50 py-12 text-brand-muted text-xs relative z-10 backdrop-blur-lg"
     >
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start justify-between gap-8"
       >
         <div class="flex items-center gap-4">
           <div class="p-2 bg-white/5 rounded-xl border border-white/10">
@@ -1319,31 +1443,44 @@
           </div>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-6 font-medium">
+        <div
+          class="flex flex-wrap justify-center md:justify-end gap-6 font-medium"
+        >
           <a href="#beranda" class="hover:text-white transition-colors"
             >Beranda</a
           >
           <a href="#kalkulator" class="hover:text-white transition-colors"
-            >Hitung Ongkir</a
+            >Ongkir</a
           >
           <a href="#produk" class="hover:text-white transition-colors"
             >Katalog</a
+          >
+          <a href="#galeri" class="hover:text-white transition-colors"
+            >Galeri</a
+          >
+          <a href="#lokasi" class="hover:text-white transition-colors"
+            >Lokasi</a
           >
           <a href="#tentang" class="hover:text-white transition-colors"
             >Tentang Kami</a
           >
         </div>
+      </div>
 
-        <div class="text-center md:text-right font-light text-[10px]">
-          <div>© <span id="year"></span> RAMA GROSIR JERUK PERAS.</div>
-          <div class="mt-1">All rights reserved.</div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left font-light text-[10px]"
+      >
+        <div>
+          © <span id="year"></span> RAMA GROSIR JERUK PERAS. All rights
+          reserved.
         </div>
+        <div class="mt-2 sm:mt-0">Tumbuh Bersama Mitra Bisnis Indonesia.</div>
       </div>
     </footer>
 
     <!-- FLOATING WA BUTTON -->
     <a
-      href="https://wa.me/6285893107096?text=Halo%20Rama%20Grosir,%20saya%20ingin%20tanya%20stok%20dan%20ongkir%20jeruk%20peras."
+      href="https://wa.me/6285893107097?text=Halo%20Rama%20Grosir,%20saya%20ingin%20tanya%20stok%20dan%20ongkir%20jeruk%20peras."
       target="_blank"
       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-[0_10px_25px_rgba(16,185,129,0.5)] transition-all duration-300 hover:scale-110 flex items-center justify-center border-2 border-white/20 group animate-bounce"
     >
@@ -1361,62 +1498,51 @@
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      // Initialize AOS Animation
       AOS.init({
         duration: 800,
         once: true,
         offset: 50,
       });
 
-      // Dynamic Year & Date
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      const today = new Date();
-      const options = { day: "numeric", month: "long", year: "numeric" };
-      document.getElementById("currentDate").textContent =
-        today.toLocaleDateString("id-ID", options);
-
-      // CALCULATOR LOGIC
+      // CALCULATOR LOGIC (LALAMOVE EXCLUSIVE)
       const armadaRules = [
         {
-          id: "express",
-          name: "Motor Express / Courier",
-          maxWeight: 25,
-          baseCost: 20000,
+          id: "lala_motor",
+          name: "Lalamove Motor",
+          icon: "🏍️",
+          maxWeight: 20,
+          baseCost: 15000,
           ratePerKg: 1000,
-          eta: "Instant / Sameday",
+          eta: "Instant Sameday",
         },
         {
-          id: "viar",
-          name: "Motor Viar Roda 3",
-          maxWeight: 50,
-          baseCost: 45000,
-          ratePerKg: 1200,
-          eta: "Sameday",
-        },
-        {
-          id: "van",
-          name: "Blind Van Cargo (Lalamove)",
+          id: "lala_car",
+          name: "Lalamove Mobil / Sedan",
+          icon: "🚙",
           maxWeight: 100,
-          baseCost: 75000,
+          baseCost: 35000,
+          ratePerKg: 1200,
+          eta: "Instant Sameday",
+        },
+        {
+          id: "lala_van",
+          name: "Lalamove Blind Van",
+          icon: "🚐",
+          maxWeight: 600,
+          baseCost: 85000,
           ratePerKg: 1500,
-          eta: "Sameday",
+          eta: "Instant Sameday",
         },
         {
-          id: "pickup",
-          name: "Pick Up Gran Max / L300",
-          maxWeight: 250,
-          baseCost: 150000,
+          id: "lala_pickup",
+          name: "Lalamove Pick Up Box",
+          icon: "🚚",
+          maxWeight: 1000,
+          baseCost: 120000,
           ratePerKg: 1800,
-          eta: "Sameday / Nextday",
-        },
-        {
-          id: "truck",
-          name: "Truk Engkel / Kargo Besar",
-          maxWeight: 5000,
-          baseCost: 350000,
-          ratePerKg: 2000,
-          eta: "1-2 Hari",
+          eta: "Sameday",
         },
       ];
 
@@ -1425,18 +1551,15 @@
         jabar: 1.3,
         jateng: 1.7,
         jatim: 2.0,
-        sumatra: 2.4,
-        bali: 2.8,
       };
 
-      let selectedArmadaId = "van";
-
+      let selectedArmadaId = "lala_motor";
       const weightInput = document.getElementById("weightInput");
       const weightSlider = document.getElementById("weightSlider");
       const weightDisplay = document.getElementById("weightDisplay");
       const regionSelect = document.getElementById("regionSelect");
+      let lastTotalCost = 0;
 
-      // Add simple number animation function
       function animateValue(obj, start, end, duration) {
         let startTimestamp = null;
         const step = (timestamp) => {
@@ -1451,8 +1574,6 @@
         window.requestAnimationFrame(step);
       }
 
-      let lastTotalCost = 0;
-
       function resetPresets() {
         document
           .querySelectorAll("#btn-50")
@@ -1460,20 +1581,20 @@
             el.classList.remove(
               "border-brand-accent",
               "text-brand-accent",
-              "shadow-[0_0_10px_rgba(255,85,0,0.2)]"
+              "shadow-[0_0_10px_rgba(242,92,5,0.2)]"
             )
           );
       }
 
       function setWeight(val) {
         weightInput.value = val;
-        weightSlider.value = val <= 200 ? val : 200;
+        weightSlider.value = val <= 1000 ? val : 1000;
         calculateShipping();
       }
 
       weightInput.addEventListener("input", function () {
         let val = parseFloat(this.value) || 0;
-        weightSlider.value = val <= 200 ? val : 200;
+        weightSlider.value = val <= 1000 ? val : 1000;
         calculateShipping();
       });
 
@@ -1488,45 +1609,61 @@
         const container = document.getElementById("armadaContainer");
         container.innerHTML = "";
 
+        let recommendedId = "lala_motor";
+        if (weight > 20) recommendedId = "lala_car";
+        if (weight > 100) recommendedId = "lala_van";
+        if (weight > 600) recommendedId = "lala_pickup";
+
+        // Auto select recommended if it's the first run or weight changed drastically
+        selectedArmadaId = recommendedId;
+
         armadaRules.forEach((armada) => {
-          const isRecommended =
-            weight <= armada.maxWeight &&
-            (armada.id === "truck" ||
-              weight >
-                (armadaRules[armadaRules.indexOf(armada) - 1]?.maxWeight || 0));
-
-          if (selectedArmadaId === "" && isRecommended) {
-            selectedArmadaId = armada.id;
-          }
-
+          const isRecommended = recommendedId === armada.id;
           const isSelected = selectedArmadaId === armada.id;
 
+          // Disable option if weight exceeds capacity
+          const isTooHeavy = weight > armada.maxWeight;
+
           const card = document.createElement("div");
-          card.className = `p-4 rounded-xl cursor-pointer transition-all border ${
-            isSelected
-              ? "bg-brand-accent/10 border-brand-accent shadow-[0_0_15px_rgba(255,85,0,0.15)] scale-[1.02]"
-              : "bg-brand-dark/50 border-brand-border hover:border-brand-border/80 hover:bg-white/5"
+          card.className = `p-4 rounded-xl transition-all border relative overflow-hidden ${
+            isTooHeavy
+              ? "opacity-40 grayscale cursor-not-allowed bg-brand-dark/30 border-white/5"
+              : isSelected
+              ? "cursor-pointer bg-brand-accent/10 border-brand-accent shadow-[0_0_15px_rgba(242,92,5,0.15)] scale-[1.02]"
+              : "cursor-pointer bg-brand-dark/50 border-brand-border hover:border-brand-accent/50 hover:bg-white/5"
           }`;
-          card.onclick = () => {
-            selectedArmadaId = armada.id;
-            calculateShipping();
-          };
+
+          if (!isTooHeavy) {
+            card.onclick = () => {
+              selectedArmadaId = armada.id;
+              calculateShipping();
+            };
+          }
 
           card.innerHTML = `
+          ${
+            isSelected
+              ? '<div class="absolute top-0 right-0 w-16 h-16 bg-brand-accent/20 rounded-bl-[100px] -z-10"></div>'
+              : ""
+          }
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-bold text-white">${armada.name}</span>
+            <span class="text-sm font-bold text-white flex items-center gap-2">
+              <span class="text-xl">${armada.icon}</span> 
+              ${armada.name}
+            </span>
             ${
               isRecommended
-                ? '<span class="text-[9px] bg-emerald-500/20 text-emerald-400 font-bold px-2 py-0.5 rounded uppercase tracking-wider">Rekomendasi</span>'
+                ? '<span class="text-[9px] bg-brand-accent text-white font-bold px-2 py-0.5 rounded uppercase tracking-wider shadow-sm">Paling Pas</span>'
                 : ""
             }
           </div>
           <div class="text-[11px] text-brand-muted flex justify-between">
             <span>Kapasitas: s/d ${armada.maxWeight} Kg</span>
-            <span class="text-emerald-400 font-semibold">${armada.eta}</span>
+            <span class="${
+              isTooHeavy ? "text-red-400" : "text-emerald-400"
+            } font-semibold">${isTooHeavy ? "Overload" : armada.eta}</span>
           </div>
         `;
-
           container.appendChild(card);
         });
       }
@@ -1536,7 +1673,6 @@
         if (weight < 1) weight = 1;
 
         weightDisplay.textContent = weight + " Kg";
-
         const juiceGlasses = Math.round(weight * 7);
         document.getElementById(
           "juiceYieldEstimate"
@@ -1547,13 +1683,12 @@
         renderArmadaOptions(weight);
 
         const armada =
-          armadaRules.find((a) => a.id === selectedArmadaId) || armadaRules[2];
+          armadaRules.find((a) => a.id === selectedArmadaId) || armadaRules[0];
         const regionKey = regionSelect.value;
         const multiplier = regionMultipliers[regionKey] || 1.0;
 
         let baseOngkir =
           (armada.baseCost + weight * armada.ratePerKg) * multiplier;
-
         let addonCost = 0;
         if (document.getElementById("addonKarung").checked) addonCost += 15000;
         if (document.getElementById("addonPeti").checked) addonCost += 25000;
@@ -1562,13 +1697,15 @@
         const effectivePerKg = Math.round(totalCost / weight);
 
         document.getElementById("resWeight").textContent = weight + " Kg";
-        document.getElementById("resRegion").textContent =
-          regionSelect.options[regionSelect.selectedIndex].text.split("(")[0];
+        document.getElementById("resRegion").textContent = regionSelect.options[
+          regionSelect.selectedIndex
+        ].text
+          .split("(")[0]
+          .trim();
         document.getElementById("resArmada").textContent = armada.name;
         document.getElementById("resPerKg").textContent =
           "Rp " + effectivePerKg.toLocaleString("id-ID") + " / Kg";
 
-        // Animate price change
         const totalOngkirElement = document.getElementById("totalOngkir");
         animateValue(totalOngkirElement, lastTotalCost, totalCost, 400);
         lastTotalCost = totalCost;
@@ -1580,24 +1717,31 @@
           .split("(")[0]
           .trim();
         const armada =
-          armadaRules.find((a) => a.id === selectedArmadaId)?.name || "Kargo";
+          armadaRules.find((a) => a.id === selectedArmadaId)?.name ||
+          "Lalamove";
         const total = document.getElementById("totalOngkir").textContent;
+        const addKarung = document.getElementById("addonKarung").checked
+          ? "Ya"
+          : "Tidak";
+        const addPeti = document.getElementById("addonPeti").checked
+          ? "Ya"
+          : "Tidak";
 
-        const message = `Halo Rama Grosir Jeruk Peras, saya mau order & konfirmasi ongkir:
+        const message = `Halo Rama Grosir Jeruk Peras, saya mau order & konfirmasi ongkir pengiriman instan:
 - Berat Pesanan: ${weight} Kg
 - Wilayah Tujuan: ${region}
-- Armada Terpilih: ${armada}
+- Proteksi Tambahan: Karung (${addKarung}), Peti (${addPeti})
+- Armada Lalamove: ${armada}
 - Estimasi Ongkir: ${total}
 
-Mohon konfirmasi ketersediaan stok & jadwal pengiriman, terima kasih!`;
+Mohon konfirmasi ketersediaan stok & dikirim link tracking Lalamove-nya ya. Terima kasih!`;
 
-        const url = `https://wa.me/6285893107096?text=${encodeURIComponent(
+        const url = `https://wa.me/6285893107097?text=${encodeURIComponent(
           message
         )}`;
         window.open(url, "_blank");
       }
 
-      // Initial calculation
       calculateShipping();
     </script>
   </body>
